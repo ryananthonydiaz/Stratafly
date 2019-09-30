@@ -10,7 +10,7 @@ export const trip = {
 	oneWay: 'One way',
 };
 
-export const stops = { nonStop: 'Nonstop' };
+export const stops = { nonStop: 'Nonstop', oneStop: '1 stop' };
 
 export const AirlineToIcon = {
 	'United Airlines': United,
@@ -21,4 +21,4 @@ export const AirlineToIcon = {
 	'Southwest Airlines': SouthWest,
 };
 
-export const testFlights = {};
+export const testFlights = { from: 'YVR' };
