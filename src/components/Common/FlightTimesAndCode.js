@@ -1,7 +1,37 @@
 import React from 'react';
+import ArrowRight from '@material-ui/icons/ArrowRightAlt';
+import { Typography, Grid } from '@material-ui/core';
 
-const FlightTimesAndCode = () => {
-	return <div />;
+export const FlightTimesAndCode = props => {
+	const { depart, arrive, fromCode, toCode, classes } = props;
+
+	return (
+		<Grid container alignItems="center" spacing={1} className={classes.FlightTimesAndCode}>
+			<Grid item>
+				<TimeAirportCode time={depart} airportCode={fromCode} classes={classes} />
+			</Grid>
+			<Grid item>
+				<ArrowRight />
+			</Grid>
+			<Grid item>
+				<TimeAirportCode time={arrive} airportCode={toCode} classes={classes} />
+			</Grid>
+		</Grid>
+	);
 };
 
-export default FlightTimesAndCode;
+export const TimeAirportCode = props => {
+	const { time, airportCode, classes } = props;
+	return (
+		<Grid container direction="column" spacing={1}>
+			<Grid item>
+				<Typography variant="subtitle2">{time}</Typography>
+			</Grid>
+			<Grid item>
+				<Typography variant="body2" className={classes.body2MediumEmphasis}>
+					{airportCode}
+				</Typography>
+			</Grid>
+		</Grid>
+	);
+};
