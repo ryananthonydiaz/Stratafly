@@ -1,6 +1,6 @@
 import React from 'react';
 import FlightIcon from '../../../images/flight.svg';
-import { SummaryMetadata } from './SummaryMetadata';
+import { SummaryMetadata } from './SummaryMetaData';
 import { makeStyles, Grid, Card } from '@material-ui/core';
 
 export const FlightSummaryCard = props => {

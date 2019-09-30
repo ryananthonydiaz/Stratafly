@@ -4,7 +4,6 @@ import { Flight } from './Flight';
 
 export const Flights = props => {
 	const { flightsWithFares, from, to, onSelect, classes } = props;
-
 	return (
 		<Card raised={true} className={classes.card}>
 			{flightsWithFares.map((flight, index) => (

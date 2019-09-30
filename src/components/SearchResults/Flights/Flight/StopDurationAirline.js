@@ -12,12 +12,12 @@ export const StopDurationAirline = props => {
 			</Grid>
 			<Grid item>
 				<Typography variant="body2" className={classes.body2MediumEmphasis}>
-					{' ' + duration + ' .  '}
+					{' ' + duration + ' . '}
 				</Typography>
 			</Grid>
 			<Grid item>
 				<Typography variant="body2" className={classes.body2MediumEmphasis}>
-					{'  ' + airline}
+					{' ' + airline}
 				</Typography>
 			</Grid>
 		</Grid>

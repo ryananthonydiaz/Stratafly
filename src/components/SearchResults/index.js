@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 	airlineImageContainer: { height: '100%', width: '100%' },
 	airlineImage: {
 		maxWidth: '100%',
-		maxheight: '100%',
+		maxHeight: '100%',
 	},
 	stopDurationAirline: {
 		padding: theme.spacing(3),
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 		paddingLeft: theme.spacing(2),
 	},
 	body2MediumEmphasis: {
-		color: theme.palette.text.primarymediumEmphasis,
+		color: theme.palette.text.primaryMediumEmphasis,
 	},
 	flightTimesAndCode: {
 		paddingLeft: theme.spacing(2),

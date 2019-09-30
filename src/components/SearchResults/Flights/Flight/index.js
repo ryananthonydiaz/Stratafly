@@ -1,13 +1,13 @@
-import React from 'react';
 import { stops } from '../../../../shared/app-constants';
 import { IconTimePrice } from './IconTimePrice';
 import { StopDurationAirline } from './StopDurationAirline';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 export const Flight = props => {
 	const { flight, from, to, onSelect, classes } = props;
 	let nonStop = stops.nonStop;
-	let oneStop = stops.oneStop;
+	let oneStop = stops.oneStop + ' at ' + flight.viaAirlineCode;
 	let stop = flight.stops === stops.nonStop ? nonStop : oneStop;
 	return (
 		<Grid container onClick={() => onSelect(flight)}>
