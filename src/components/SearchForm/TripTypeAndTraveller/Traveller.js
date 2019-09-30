@@ -2,12 +2,12 @@ import React from 'react';
 import { IconButton, Grid, Typography } from '@material-ui/core';
 import TravellerIcon from '@material-ui/icons/PersonOutlined';
 
-const Traveller = props => {
+export const Traveller = props => {
 	const { classes, onClickTraveller, totalTravellers } = props;
 	return (
 		<Grid container>
 			<Grid item>
-				<IconButton aria-label="Traveller" onCLick={onClickTraveller}>
+				<IconButton aria-label="Traveller" onClick={onClickTraveller}>
 					<TravellerIcon className={classes.travellerIcon} />
 					<Typography variant={'subtitle1'} color="textSecondary">
 						{totalTravellers}
@@ -17,5 +17,3 @@ const Traveller = props => {
 		</Grid>
 	);
 };
-
-export default Traveller;

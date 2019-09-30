@@ -2,9 +2,8 @@ import React from 'react';
 import NoResults from '../../images/noresults.svg';
 import { makeStyles, Grid } from '@material-ui/core';
 
-const Empty = () => {
+export const Empty = () => {
 	const classes = useStyles();
-
 	return (
 		<Grid container className={classes.root} justify={'center'}>
 			<Grid item xs={8} className={classes.imageContainer}>
@@ -25,8 +24,6 @@ const useStyles = makeStyles(theme => ({
 	image: {
 		paddingTop: theme.spacing(6),
 		maxWidth: '100%',
-		maxheight: '100%',
+		maxHeight: '100%',
 	},
 }));
-
-export default Empty;

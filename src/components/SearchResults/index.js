@@ -1,5 +1,5 @@
 import React from 'react';
-import FlightTakeOffIcon from '@material-ui/icons/FlightTakeoffOutlinedimport';
+import FlightTakeOffIcon from '@material-ui/icons/FlightTakeoffOutlined';
 import SortByIcon from '@material-ui/icons/SwapVert';
 import { ResultHeader } from '../Common/ResultHeader';
 import { Flights } from './Flights';
@@ -25,3 +25,29 @@ export const SearchResults = ({ flights, onSelect, headerLabel }) => {
 		</>
 	);
 };
+
+const useStyles = makeStyles(theme => ({
+	card: {
+		borderRadius: theme.shape.borderRadius * 2,
+	},
+	iconTimePrice: {
+		paddingTop: theme.spacing(2),
+		paddingLeft: theme.spacing(2),
+	},
+	airlineImageContainer: { height: '100%', width: '100%' },
+	airlineImage: {
+		maxWidth: '100%',
+		maxheight: '100%',
+	},
+	stopDurationAirline: {
+		padding: theme.spacing(3),
+		paddingBottom: theme.spacing(1),
+		paddingLeft: theme.spacing(2),
+	},
+	body2MediumEmphasis: {
+		color: theme.palette.text.primarymediumEmphasis,
+	},
+	flightTimesAndCode: {
+		paddingLeft: theme.spacing(2),
+	},
+}));

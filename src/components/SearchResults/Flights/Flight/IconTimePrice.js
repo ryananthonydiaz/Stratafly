@@ -5,14 +5,23 @@ import { AirlineToIcon } from '../../../../shared/app-constants';
 
 export const IconTimePrice = props => {
 	const { fromCode, toCode, classes, flight } = props;
-
 	return (
 		<Grid container className={classes.iconTimePrice}>
 			<Grid item xs={1}>
-				<AirlineToIcon airline={flight.ariline} classes={classes} />
+				<AirlineIcon airline={flight.airline} classes={classes} />
 			</Grid>
 
 			<Grid item xs={6}>
+				<FlightTimesAndCode
+					depart={flight.depart}
+					arrive={flight.arrive}
+					fromCode={fromCode}
+					toCode={toCode}
+					classes={classes}
+				/>
+			</Grid>
+
+			<Grid item xs={5}>
 				<Price price={flight.price} classes={classes} />
 			</Grid>
 		</Grid>

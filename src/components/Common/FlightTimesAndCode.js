@@ -1,12 +1,11 @@
-import React from 'react';
 import ArrowRight from '@material-ui/icons/ArrowRightAlt';
+import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 
 export const FlightTimesAndCode = props => {
 	const { depart, arrive, fromCode, toCode, classes } = props;
-
 	return (
-		<Grid container alignItems="center" spacing={1} className={classes.FlightTimesAndCode}>
+		<Grid container alignItems="center" spacing={1} className={classes.flightTimesAndCode}>
 			<Grid item>
 				<TimeAirportCode time={depart} airportCode={fromCode} classes={classes} />
 			</Grid>

@@ -2,8 +2,7 @@ import React from 'react';
 import { InputBase, InputAdornment } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core';
 
-const CommongInputBase = props => {
-	const { onChange, value, placeholder, icon, type } = props;
+export const CustomInputBase = ({ onChange, value, placeholder, icon, type }) => {
 	const classes = useStyles();
 	return (
 		<InputBase
@@ -16,7 +15,7 @@ const CommongInputBase = props => {
 			placeholder={placeholder}
 			value={value}
 			type={type}
-			classname={classes.input}
+			className={classes.input}
 			onChange={event => onChange(event.target.value)}
 		/>
 	);
@@ -27,11 +26,10 @@ const useStyles = makeStyles(theme => ({
 		backgroundColor: theme.palette.primary.main,
 		borderRadius: theme.shape.borderRadius * 2,
 		color: theme.palette.common.white,
-		fontSize: theme.typography.subtitle1.fontWeight,
+		fontSize: theme.typography.subtitle1.fontSize,
+		fontWeight: theme.typography.subtitle1.fontWeight,
 	},
 	textFieldIcon: {
 		paddingLeft: theme.spacing(1),
 	},
 }));
-
-export default CommongInputBase;

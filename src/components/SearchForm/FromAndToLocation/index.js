@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import LocationIcon from '@material-ui/icons/LocationOnOutlined';
-import CustomInputBase from '../../Common/CommongInputBase';
+import { CustomInputBase } from '../../Common/CustomInputBase';
 
-const FromAndToLocation = props => {
+export const FromAndToLocation = props => {
 	const { fromLocation, onChangeFromLocation, toLocation, onChangeToLocation, classes } = props;
 	return (
 		<Grid container>
@@ -16,7 +16,6 @@ const FromAndToLocation = props => {
 					icon={<LocationIcon className={classes.textFieldIcon} />}
 				/>
 			</Grid>
-
 			<Grid item xs={12} className={classes.textFields}>
 				<CustomInputBase
 					onChange={onChangeToLocation}
@@ -29,5 +28,3 @@ const FromAndToLocation = props => {
 		</Grid>
 	);
 };
-
-export default FromAndToLocation;

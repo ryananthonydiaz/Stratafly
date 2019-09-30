@@ -1,4 +1,5 @@
 import React from 'react';
+import { stops } from '../../../../shared/app-constants';
 import { IconTimePrice } from './IconTimePrice';
 import { StopDurationAirline } from './StopDurationAirline';
 import Grid from '@material-ui/core/Grid';

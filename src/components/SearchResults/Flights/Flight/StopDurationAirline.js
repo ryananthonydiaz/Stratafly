@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 
-export const StopDurationAirLines = props => {
+export const StopDurationAirline = props => {
 	const { classes, stop, duration, airline } = props;
 	return (
 		<Grid container className={classes.stopDurationAirline} spacing={1}>

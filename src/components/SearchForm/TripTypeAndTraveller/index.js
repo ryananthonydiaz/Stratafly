@@ -1,9 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import TripType from './TripType';
-import Traveller from './Traveller';
+import { TripType } from './TripType';
+import { Traveller } from './Traveller';
 
-const TripTypeAndTraveller = props => {
+export const TripTypeAndTraveller = props => {
 	const { selectedRadio, onChangeRadio, onClickTraveller, totalTravellers, classes } = props;
 	return (
 		<Grid container className={classes.tripTypeTraveller} alignItems="center">
@@ -17,5 +17,3 @@ const TripTypeAndTraveller = props => {
 		</Grid>
 	);
 };
-
-export default TripTypeAndTraveller;

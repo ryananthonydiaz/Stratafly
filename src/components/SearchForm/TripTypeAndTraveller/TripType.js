@@ -2,7 +2,7 @@ import React from 'react';
 import { RadioGroup, Radio, Typography, FormControlLabel } from '@material-ui/core';
 import { trip } from '../../../shared/app-constants';
 
-const TripType = props => {
+export const TripType = props => {
 	const { selectedRadio, onChangeRadio } = props;
 	let isOneWay = selectedRadio === 'one-way';
 	return (
@@ -14,10 +14,8 @@ const TripType = props => {
 						{trip.roundTrip}
 					</Typography>
 				}
-				control={<Radio checked={!isOneWay} />}
-				color="default"
+				control={<Radio checked={!isOneWay} color="default" />}
 			/>
-
 			<FormControlLabel
 				value="one-way"
 				label={
@@ -25,10 +23,8 @@ const TripType = props => {
 						{trip.oneWay}
 					</Typography>
 				}
-				control={<Radio check={isOneWay} color="default" />}
+				control={<Radio checked={isOneWay} color="default" />}
 			/>
 		</RadioGroup>
 	);
 };
-
-export default TripType;

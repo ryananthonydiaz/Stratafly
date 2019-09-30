@@ -5,7 +5,6 @@ import DateIcon from '@material-ui/icons/EventOutlined';
 
 export const FromAndToDate = props => {
 	let { selectedRadio, fromDate, onFromDateChange, toDate, onToDateChange, classes } = props;
-
 	if (selectedRadio === 'one-way') {
 		return (
 			<Grid container>
@@ -34,5 +33,3 @@ export const FromAndToDate = props => {
 		);
 	}
 };
-
-export default FromAndToDate;

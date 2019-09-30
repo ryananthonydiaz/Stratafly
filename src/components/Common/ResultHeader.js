@@ -27,7 +27,8 @@ export const ResultHeader = props => {
 const HeaderIconAndLabel = props => {
 	return (
 		<Grid container direction="row" alignItems={'center'} spacing={2}>
-			<Grid item>{props.icon}</Grid>
+			<Grid item> {props.icon}</Grid>
+
 			<Grid item>
 				<Typography variant="subtitle1" color="secondary">
 					{props.text}
@@ -40,7 +41,7 @@ const HeaderIconAndLabel = props => {
 const HeaderRightIcon = props => {
 	return (
 		<Grid container justify="flex-end">
-			<Grid item> {props.icon}</Grid>
+			<Grid item>{props.icon}</Grid>
 		</Grid>
 	);
 };
